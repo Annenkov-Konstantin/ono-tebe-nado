@@ -1,5 +1,5 @@
 .header {
-  padding: 88px 51px 93px;
+  padding: 90px 51px 93px;
   display: grid;
   grid-template-columns: 1fr 140px 1fr;
   align-items: center;
@@ -306,7 +306,7 @@
   grid-template-columns: 1fr 149px 1fr;
   justify-items: stretch;
   font-size: 18px;
-  padding-bottom: 39px;
+  padding-bottom: 90px;
 }
 
 .footer__address {
