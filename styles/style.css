@@ -113,7 +113,7 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  column-gap: 75px;
+  column-gap: 73px;
   top: 147px;
 }
 
@@ -298,10 +298,10 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 149px 1fr;
+  grid-template-columns: 1fr 150px 1fr;
   justify-items: stretch;
   font-size: 18px;
-  padding-bottom: 90px;
+  padding-bottom: 88px;
 }
 
 .footer__address {
