@@ -16,12 +16,15 @@
   list-style: none;
 }
 
-.header__link_active {
+.nav__link {
+  text-underline-offset: 3px;
+}
+
+.nav__link_active {
   text-decoration: none;
 }
 
 .header__links-list-item {
-  text-underline-offset: 3px;
   list-style: circle;
 }
 
@@ -48,7 +51,7 @@
   font-size: 18px;
 }
 
-.header__link {
+.address__link {
   display: block;
 }
 
@@ -56,32 +59,30 @@
   position: relative;
   display: flex;
   color: #fff;
-  background-image: url(/images/cover.jpg);
+  background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: center top;
   width: 1100px;
-  height: 757px;
+  min-height: 757px;
   z-index: -1;
 }
 
 .overlay {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
 .cover__indents {
-  padding: 167px 50px 62px;
+  padding: 167px 50px 45px;
 }
 
 .cover__title {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  gap: 5px;
   width: 1000px;
-  height: 355px;
   position: relative;
   z-index: 1;
   font-size: 100px;
@@ -103,6 +104,7 @@
 .aligned-text_right {
   justify-self: end;
   display: inline;
+  padding-top: 5px;
 }
 
 .no-letter-spacing {
@@ -111,10 +113,9 @@
 
 .cover__description {
   display: flex;
-  position: relative;
   justify-content: space-between;
-  column-gap: 73px;
-  top: 147px;
+  padding-top: 127px;
+  align-items: center;
 }
 
 .cover__description-text {
@@ -134,17 +135,13 @@
   background-color: transparent;
   color: #fff;
   padding: 11px 31px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   vertical-align: top;
-  position: relative;
-  bottom: 13px;
-  /* right: -10px; */
   font-family: Raleway, sans-serif;
 }
 
 .lots {
   padding: 180px 24px 2px;
-  min-height: 692px;
   margin-bottom: 145px;
 }
 
@@ -160,6 +157,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   column-gap: 25px;
+  row-gap: 25px;
   padding-top: 2px;
   margin-bottom: 30px;
 }
@@ -168,7 +166,7 @@
   list-style: none;
   flex-grow: 1;
   width: 334px;
-  min-height: 563px;
+  height: 563px;
 }
 
 .card-link {
@@ -181,12 +179,20 @@
   height: 100%;
   display: flex;
   color: #fff;
+  background-size: cover;
+  background-position: center;
 }
 
 .card_type_film {
-  background-image: url(/images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .flex-lots {
@@ -208,18 +214,6 @@
   font-size: 20px;
 }
 
-.card_type_book {
-  background-image: url(/images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.card_type_picture {
-  background-image: url(/images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
 .lots__look-more-link {
   font-size: 20px;
   text-underline-offset: 4px;
@@ -235,35 +229,33 @@
   height: 240px;
   place-items: center;
   background-color: black;
-  border-radius: 150px;
+  border-radius: 50%;
   padding-top: 2px;
 }
 
-.about_second_column_title {
-  grid-area: about_second_column_title;
+.about__right__column__title {
+  grid-area: about__right__column__title;
   align-self: center;
   padding-top: 8px;
 }
 
-.about__text__first_par {
-  grid-area: about__text__first_par;
+.about__text__block {
+  grid-area: about__text__block;
   padding-top: 8px;
 }
 
-.about__text__second_par {
-  grid-area: about__text__second_par;
-  padding-top: 25px;
+.par__space {
+  margin-bottom: 25px;
 }
 
 .about {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    "about__logo about_second_column_title ."
-    "about__logo about__text__first_par about__text__first_par"
-    ".           about__text__second_par about__text__second_par";
+    "about__logo about__right__column__title ."
+    "about__logo about__text__block about__text__block"
+    ".           about__text__block about__text__block";
   column-gap: 25px;
-  min-height: 560px;
   padding-top: 35px;
   padding-left: 27px;
   padding-right: 30px;
@@ -307,11 +299,6 @@
 .footer__address {
   padding-left: 51px;
   text-underline-offset: 3px;
-  padding-top: 2px;
-}
-
-.footer__link {
-  display: block;
 }
 
 .footer__menu {
@@ -336,14 +323,9 @@
   display: block;
 }
 
-.footer__menu-link {
-  text-underline-offset: 3px;
-}
-
 .footer__social-list {
   display: flex;
   width: 240px;
-  min-height: 48px;
   justify-self: end;
   justify-content: flex-end;
   gap: 48px;
