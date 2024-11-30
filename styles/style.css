@@ -56,7 +56,6 @@
 }
 
 .cover {
-  position: relative;
   display: flex;
   color: #fff;
   background-image: url(../images/cover.jpg);
@@ -64,15 +63,12 @@
   background-position: center top;
   width: 1100px;
   min-height: 757px;
-  z-index: -1;
 }
 
 .overlay {
-  position: relative;
   width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
 }
 
 .cover__indents {
@@ -83,8 +79,6 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   width: 1000px;
-  position: relative;
-  z-index: 1;
   font-size: 100px;
   line-height: 115%;
   text-transform: uppercase;
@@ -166,7 +160,7 @@
   list-style: none;
   flex-grow: 1;
   width: 334px;
-  height: 563px;
+  min-height: 563px;
 }
 
 .card-link {
@@ -244,10 +238,6 @@
   padding-top: 8px;
 }
 
-.par__space {
-  margin-bottom: 25px;
-}
-
 .about {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -259,7 +249,7 @@
   padding-top: 35px;
   padding-left: 27px;
   padding-right: 30px;
-  margin-bottom: 178px;
+  margin-bottom: 154px;
 }
 
 .about__column {
@@ -286,6 +276,7 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: normal;
+  padding-bottom: 24px;
 }
 
 .footer {
@@ -298,6 +289,7 @@
 
 .footer__address {
   padding-left: 51px;
+  padding-top: 1px;
   text-underline-offset: 3px;
 }
 
